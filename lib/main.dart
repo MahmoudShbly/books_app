@@ -1,3 +1,4 @@
+import 'package:books_app/core/utils/constants.dart';
 import 'package:books_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -13,7 +14,7 @@ class BooksApp extends StatelessWidget {
     return GetMaterialApp(
      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color(0xff100B20),
+        scaffoldBackgroundColor:kPrimaryColor,
       ),
       home:const SplashView() ,
     );
