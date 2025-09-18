@@ -8,7 +8,7 @@ class CustomListViewItem extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 2.8 / 4, 
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        padding: const EdgeInsets.only(left: 5.0),
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
