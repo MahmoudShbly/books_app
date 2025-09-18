@@ -1,4 +1,5 @@
 import 'package:books_app/core/utils/styles.dart';
+import 'package:books_app/features/home/presentation/views/widget/best_seller_list_view.dart';
 import 'package:books_app/features/home/presentation/views/widget/custom_app_bar.dart';
 
 import 'package:books_app/features/home/presentation/views/widget/featured_list_view.dart';
@@ -15,15 +16,16 @@ class HomeViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          CustomAppBar(), 
+          CustomAppBar(),
           FeaturedListView(),
-          const SizedBox(
-            height: 50.0,
+          const SizedBox(height: 50.0),
+          Text(
+            'Best Seller',
+            style: GoogleFonts.montserrat(textStyle: Styles.textStyle18),
           ),
-          Text('Best Seller',style:GoogleFonts.montserrat(textStyle: Styles.midiumeTitleStyle),),
-      
-      
-          ],
+          SizedBox(height: 20),
+          BestSellerListViewItem(),
+        ],
       ),
     );
   }

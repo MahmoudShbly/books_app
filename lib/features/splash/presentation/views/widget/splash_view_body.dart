@@ -1,4 +1,4 @@
-import 'package:books_app/core/utils/assets.dart';
+import 'package:books_app/core/utils/my_assets.dart';
 import 'package:books_app/features/home/presentation/views/home_view.dart';
 import 'package:books_app/features/splash/presentation/views/widget/sliding_text.dart';
 import 'package:flutter/material.dart';

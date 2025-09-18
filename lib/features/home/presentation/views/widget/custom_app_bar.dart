@@ -1,4 +1,4 @@
-import 'package:books_app/core/utils/assets.dart';
+import 'package:books_app/core/utils/my_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
