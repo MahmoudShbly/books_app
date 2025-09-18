@@ -1,5 +1,6 @@
 import 'package:books_app/features/home/presentation/views/widget/custom_app_bar.dart';
-import 'package:books_app/features/home/presentation/views/widget/custom_list_view_item.dart';
+
+import 'package:books_app/features/home/presentation/views/widget/featured_list_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -10,10 +11,10 @@ class HomeViewBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        CustomAppBar(),
-
-        CustomListViewItem(),
-      ],
+        CustomAppBar(), 
+        FeaturedListView(),
+        ],
     );
   }
 }
+

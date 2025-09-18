@@ -5,18 +5,14 @@ class CustomListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height * .25,
-        child: AspectRatio(
-          aspectRatio: 2.6 / 4,
-      
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              color: Colors.amber,
-            ),
+    return AspectRatio(
+      aspectRatio: 2.8 / 4, 
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.amber,
           ),
         ),
       ),
