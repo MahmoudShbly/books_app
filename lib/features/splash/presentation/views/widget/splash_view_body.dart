@@ -1,9 +1,8 @@
+import 'package:books_app/core/utils/app_router.dart';
 import 'package:books_app/core/utils/my_assets.dart';
-import 'package:books_app/features/home/presentation/views/home_view.dart';
 import 'package:books_app/features/splash/presentation/views/widget/sliding_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-import 'package:get/utils.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -14,17 +13,15 @@ class SplashViewBody extends StatefulWidget {
 
 class _SplashViewBodyState extends State<SplashViewBody>
     with SingleTickerProviderStateMixin {
-  late AnimationController animationController;
+  late AnimationController animationController; //0-1
   late Animation<Offset> slidingAnimation;
 
   @override
   void initState() {
     super.initState();
-    initSlidingAnimation(); 
+    initSlidingAnimation();
     navigateToHome();
   }
-
-
 
   @override
   void dispose() {
@@ -43,22 +40,29 @@ class _SplashViewBodyState extends State<SplashViewBody>
       ],
     );
   }
+
   void initSlidingAnimation() {
-      animationController = AnimationController(
+    animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 1), 
+      duration: const Duration(seconds: 1),
     );
-    
+
     slidingAnimation = Tween<Offset>(
       begin: const Offset(0, 3),
       end: Offset.zero,
     ).animate(animationController);
-    
-    animationController.forward(); 
+
+    animationController.forward();
   }
+
   void navigateToHome() {
-    Future.delayed(Duration(seconds: 2),(){
-      Get.to(()=>HomeView(),transition: Transition.fade,duration: kTabScrollDuration);
+    Future.delayed(Duration(seconds: 2), () {
+      // Get.to(
+      //   () => HomeView(),
+      //   transition: Transition.fade,
+      //   duration: kTabScrollDuration,
+      // );
+      GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
     });
   }
 }

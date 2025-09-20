@@ -8,8 +8,8 @@ class BestSellerListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       physics: NeverScrollableScrollPhysics(),
-      // shrinkWrap: true, // list view take height of his children
-      padding: EdgeInsets.all(0.0),
+      shrinkWrap: true, // list view take height of his children
+      padding: EdgeInsets.all(0),
       itemBuilder: (context, index) => BestSellerListViewItem(),
       itemCount: 10,
     );
