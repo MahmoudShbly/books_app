@@ -8,6 +8,7 @@ class BookRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         Icon(FontAwesomeIcons.solidStar, color: Colors.amber, size: 16),
         SizedBox(
@@ -17,7 +18,7 @@ class BookRating extends StatelessWidget {
         SizedBox(
           width: 5,
         ),
-        Text('(Reviews) ',style: Styles.textStyle14,),
+        Text('(Reviews) ',style: Styles.textStyle14.copyWith(color: Colors.grey),),
       ],
     );
   }
