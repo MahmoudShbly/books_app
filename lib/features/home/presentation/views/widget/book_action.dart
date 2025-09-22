@@ -2,8 +2,8 @@ import 'package:books_app/core/utils/styles.dart';
 import 'package:books_app/core/widget/cutom_button.dart';
 import 'package:flutter/material.dart';
 
-class ActionButtons extends StatelessWidget {
-  const ActionButtons({super.key});
+class BookAction extends StatelessWidget {
+  const BookAction({super.key});
 
   @override
   Widget build(BuildContext context) {
