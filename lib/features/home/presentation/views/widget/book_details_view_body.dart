@@ -3,6 +3,7 @@ import 'package:books_app/features/home/presentation/views/widget/action_button.
 import 'package:books_app/features/home/presentation/views/widget/book_rating.dart';
 import 'package:books_app/features/home/presentation/views/widget/custom_book_details_app_bar.dart';
 import 'package:books_app/features/home/presentation/views/widget/custom_book_image.dart';
+import 'package:books_app/features/home/presentation/views/widget/similare_books_list_view.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -32,13 +33,18 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           SizedBox(height: 18),
           BookRating(),
-          SizedBox(
-            height: 15,
-          ),
+          SizedBox(height: 15),
           ActionButtons(),
+          const SizedBox(height: 20),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text('You can see also', style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600)),
+          ),
+          const SizedBox(height: 16),
+          SimilareBooksListView(),
+          const SizedBox(height: 0),
         ],
       ),
     );
   }
 }
-
