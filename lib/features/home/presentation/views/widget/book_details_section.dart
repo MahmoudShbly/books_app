@@ -9,30 +9,26 @@ class BookDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        var width = MediaQuery.of(context).size.width;
-    return  Column(
+    var width = MediaQuery.of(context).size.width;
+    return Column(
       children: <Widget>[
-         Padding(
-                  padding: EdgeInsets.symmetric(horizontal: width * .2),
-                  child: CustomBookImage(),
-                ),
-                SizedBox(height: 30),
-                Text(
-                  'Hary Potter And The Goblet Of Fire',
-                  style: Styles.textStyle30,
-                ),
-                SizedBox(height: 6),
-                Text(
-                  'GT Secrta Fine',
-                  style: Styles.textStyle14.copyWith(
-                    color: Colors.white.withValues(alpha: .7),
-                  ),
-                ),
-                SizedBox(height: 18),
-                BookRating(),
-                 SizedBox(height: 15),
-                BookAction(),
-
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: width * .2),
+          child: CustomBookImage(),
+        ),
+        SizedBox(height: 30),
+        Text('Hary Potter And The Goblet Of Fire', style: Styles.textStyle30),
+        SizedBox(height: 6),
+        Text(
+          'GT Secrta Fine',
+          style: Styles.textStyle14.copyWith(
+            color: Colors.white.withValues(alpha: .7),
+          ),
+        ),
+        SizedBox(height: 18),
+        BookRating(),
+        SizedBox(height: 15),
+        BookAction(),
       ],
     );
   }

@@ -11,14 +11,13 @@ class BookRating extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         Icon(FontAwesomeIcons.solidStar, color: Colors.amber, size: 16),
-        SizedBox(
-          width: 6.3,
+        SizedBox(width: 6.3),
+        Text('0.0', style: Styles.textStyle16),
+        SizedBox(width: 5),
+        Text(
+          '(Reviews) ',
+          style: Styles.textStyle14.copyWith(color: Colors.grey),
         ),
-        Text('0.0',style: Styles.textStyle16,),
-        SizedBox(
-          width: 5,
-        ),
-        Text('(Reviews) ',style: Styles.textStyle14.copyWith(color: Colors.grey),),
       ],
     );
   }

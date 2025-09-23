@@ -6,25 +6,20 @@ class SearchSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   TextField(
-            decoration: InputDecoration(
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(
-                  color: Colors.white.withValues(alpha: .6),
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-                borderSide: BorderSide(color: Colors.white),
-              ),
-              hintText: 'Search',
-              suffixIcon: const Icon(
-                FontAwesomeIcons.magnifyingGlass,
-                size: 22,
-              ),
-              border: OutlineInputBorder(),
-            ),
-          );
+    return TextField(
+      decoration: InputDecoration(
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Colors.white.withValues(alpha: .6)),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Colors.white),
+        ),
+        hintText: 'Search',
+        suffixIcon: const Icon(FontAwesomeIcons.magnifyingGlass, size: 22),
+        border: OutlineInputBorder(),
+      ),
+    );
   }
 }

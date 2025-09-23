@@ -4,7 +4,8 @@ class CutomButton extends StatelessWidget {
   const CutomButton({
     super.key,
     required this.border,
-    required this.backgroundColor,  required this.buttonChild,
+    required this.backgroundColor,
+    required this.buttonChild,
   });
 
   final BorderRadiusGeometry border;
@@ -20,7 +21,7 @@ class CutomButton extends StatelessWidget {
           shape: RoundedRectangleBorder(borderRadius: border),
           backgroundColor: backgroundColor,
         ),
-        child:buttonChild ,
+        child: buttonChild,
       ),
     );
   }

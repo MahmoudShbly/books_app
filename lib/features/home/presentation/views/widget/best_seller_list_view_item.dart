@@ -12,7 +12,7 @@ class BestSellerListViewItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: GestureDetector(
-        onTap: ()=>GoRouter.of(context).push(AppRouter.kBookDetalisView),
+        onTap: () => GoRouter.of(context).push(AppRouter.kBookDetalisView),
         child: SizedBox(
           height: 125,
           child: Row(
@@ -46,7 +46,7 @@ class BestSellerListViewItem extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 3),
-        
+
                     Text(
                       'poster ',
                       style: Styles.textStyle14.copyWith(color: Colors.grey),
@@ -55,7 +55,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        
+
                       children: <Widget>[
                         Text(
                           r'price $',

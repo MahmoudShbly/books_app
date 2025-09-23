@@ -16,7 +16,10 @@ class BookAction extends StatelessWidget {
               topLeft: Radius.circular(12),
               bottomLeft: Radius.circular(12),
             ),
-            buttonChild: Text(r'20$',style: Styles.textStyle18.copyWith(color: Colors.black),),
+            buttonChild: Text(
+              r'20$',
+              style: Styles.textStyle18.copyWith(color: Colors.black),
+            ),
           ),
         ),
         Expanded(
@@ -26,7 +29,10 @@ class BookAction extends StatelessWidget {
               topRight: Radius.circular(12),
               bottomRight: Radius.circular(12),
             ),
-            buttonChild: Text('Preview',style: Styles.textStyle16.copyWith(color: Colors.white),),
+            buttonChild: Text(
+              'Preview',
+              style: Styles.textStyle16.copyWith(color: Colors.white),
+            ),
           ),
         ),
       ],
