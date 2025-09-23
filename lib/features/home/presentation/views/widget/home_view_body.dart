@@ -1,5 +1,5 @@
 import 'package:books_app/core/utils/styles.dart';
-import 'package:books_app/features/home/presentation/views/widget/best_seller_list_view.dart';
+import 'package:books_app/features/home/presentation/views/widget/book_seller_list_view.dart';
 import 'package:books_app/features/home/presentation/views/widget/custom_app_bar.dart';
 import 'package:books_app/features/home/presentation/views/widget/featured_list_view.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +37,7 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal:  16.0, ),
-            child: BestSellerListView(),
+            child: BookListView(),
           ),
           
         ),
