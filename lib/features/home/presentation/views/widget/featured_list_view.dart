@@ -13,11 +13,13 @@ class FeaturedListView extends StatelessWidget {
     return BlocBuilder<FeatrueBooksCubit, FeatrueBooksState>(
       builder: (context, state) {
         if (state is FeatrueBooksSuccess) {
+          print(state.data);
           return SizedBox(
             height: MediaQuery.of(context).size.height * .25,
             child: ListView.builder(
+              itemCount: state.data.length,
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => CustomBookImage(),
+              itemBuilder: (context, index) => CustomBookImage(imageUrl: state.data[index].volumeInfo.imageLinks.thumbnail,),
             ),
           );
         } else if (state is FeatrueBooksFailure) {

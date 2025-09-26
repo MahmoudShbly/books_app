@@ -14,7 +14,7 @@ class BookDetailsSection extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
-          child: CustomBookImage(),
+          child: CustomBookImage(imageUrl: '',),
         ),
         SizedBox(height: 30),
         Text('Hary Potter And The Goblet Of Fire', style: Styles.textStyle30),
