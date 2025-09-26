@@ -6,7 +6,7 @@ import 'package:equatable/equatable.dart';
 part 'featrue_books_state.dart';
 
 class FeatrueBooksCubit extends Cubit<FeatrueBooksState> {
-  FeatrueBooksCubit(this.homeRepo, super.key);
+  FeatrueBooksCubit(this.homeRepo, ) : super(FeatrueBooksInitial());
   HomeRepo homeRepo;
   Future<void> fetchFeatrueBooks() async {
     emit(FeatrueBooksLoading());
