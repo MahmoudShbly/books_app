@@ -1,5 +1,5 @@
 import 'package:books_app/core/utils/styles.dart';
-import 'package:books_app/features/home/presentation/views/widget/book_seller_list_view.dart';
+import 'package:books_app/features/home/presentation/views/widget/book_list_view.dart';
 import 'package:books_app/features/search/presentation/views/widget/search_section.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
