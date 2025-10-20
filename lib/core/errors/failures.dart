@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
 abstract class Failures {
-  final errorMassage;
+  final String errorMassage;
   Failures(this.errorMassage);
 }
 
@@ -23,14 +23,14 @@ class ServerFailure extends Failures {
           dioError.response!.data,
         );
       case DioExceptionType.cancel:
-        return ServerFailure('Rrquest to api was canceled');
+        return ServerFailure('Request to api was canceled');
       case DioExceptionType.connectionError:
-        return ServerFailure('Conection lost plase try again');
+        return ServerFailure('Connection lost please try again');
       case DioExceptionType.unknown:
         if (dioError.message!.contains('SocketException')) {
-          return ServerFailure('No Intenet Conection');
+          return ServerFailure('No Internet Connection');
         } else {
-          return ServerFailure('Unexpected error plase try again ');
+          return ServerFailure('Unexpected error please try again ');
         }
     }
   }
@@ -42,7 +42,7 @@ class ServerFailure extends Failures {
     } else if (statusCode == 500) {
       return ServerFailure('Your request not found try again');
     } else {
-      return ServerFailure('Opps there was an error plase try again');
+      return ServerFailure('Oops there was an error please try again');
     }
   }
 }

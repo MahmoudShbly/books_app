@@ -1,5 +1,5 @@
 import 'package:books_app/core/widget/custom_circular_indicator.dart';
-import 'package:books_app/core/widget/cutom_error_massage.dart';
+import 'package:books_app/core/widget/custom_error_massage.dart';
 import 'package:books_app/features/home/presentation/manager/newest%20books%20cubit/cubit/newest_books_cubit.dart';
 import 'package:books_app/features/home/presentation/views/widget/book_list_view_item.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class BookListView extends StatelessWidget {
             itemCount: state.data.length,
           );
         } else if (state is NewestBooksFailure) {
-          return  CutomErrorMassage(errorMassage: state.errorMassage);
+          return  CustomErrorMassage(errorMassage: state.errorMassage);
         }else{return const CustomCircularIndicator();}
       },
     );
